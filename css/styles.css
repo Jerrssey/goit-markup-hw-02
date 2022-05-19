@@ -10,12 +10,17 @@
   --main-bg-color: #ffffff;
   --second-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
+  --cards-bg-color: #eeeeee;
 }
 
 body {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   font-family: 'Roboto', sans-serif;
+  width: 1600px;
+
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .link {
@@ -30,7 +35,6 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
-  /* identical to box height */
 
   letter-spacing: 0.03em;
 }
@@ -43,7 +47,45 @@ body {
   list-style: none;
 }
 
+.section-title {
+  color: var(--title-text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+}
+
 /* Header */
+.header,
+.nav,
+.site-nav,
+.contacts {
+  display: flex;
+}
+.nav {
+  margin-right: 270px;
+}
+
+.nav .logo {
+  margin: auto 90px auto 215px;
+}
+
+.nav .link,
+.contacts .link {
+  margin-right: 50px;
+}
+
+.nav .contacts {
+  margin-right: 215px;
+  margin-block-end: 215px;
+}
+
+.site-nav {
+  padding-left: 0%;
+}
+
+
 .site-nav .link,
 .contacts .link {
   font-style: normal;
@@ -57,6 +99,10 @@ body {
   color: var(--title-text-color);
 }
 
+.link.current {
+  color: var(--accent-color);
+}
+
 .contacts .link {
   color: var(--main-text-color);
 }
@@ -68,9 +114,24 @@ body {
   color: var(--accent-color);
 }
 
+/* main */
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Hero */
 .hero {
   background-color: var(--second-bg-color);
+  height: 600px;
+}
+
+.hero-title {
+  margin: 200px 450px 30px 450px;
+}
+
+.order-button {
+  margin: auto;
 }
 
 .hero-title {
@@ -80,7 +141,170 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.order-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  padding: 10px 32px;
+}
+
+/* qualities */
+.qualities {
+  display: flex;
+}
+
+.quality-title {
+  color: var(--title-text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.quality-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/* portfolio */
+.portfolios {
+  display: flex;
+}
+
+/* team */
+.team-section {
+  background-color: var(--third-bg-color);
+}
+
+.team {
+  display: flex;
+}
+
+.team-memeber {
+  background-color: var(--main-bg-color);
+}
+
+.team-memeber-title {
+  color: var(--title-text-color);
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.03em;
+}
+
+.team-memeber-position {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.03em;
+}
+
+/* footer */
+.footer {
+  background-color: var(--second-bg-color);
+}
+
+.footer .link {
+  color: var(--secondary-text-color);
+}
+
+.addresses .link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+}
+
+/* portfolio page*/
+
+/* filters */
+.filters {
+  display: flex;
+}
+
+.filter-button {
+  background-color: var(--third-bg-color);
+  border-style: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  padding: 6px 22px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+}
+
+/* works */
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.work-title {
+  color: var(--title-text-color);
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+
+  letter-spacing: 0.06em;
+}
+
+.work-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+
+  letter-spacing: 0.03em;
+}
+
+.work {
+  border: 1px solid #eeeeee;
 }
