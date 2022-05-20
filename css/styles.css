@@ -82,7 +82,6 @@ body {
 .contacts {
   margin-left: 0px;
   margin-right: 215px;
-  
 }
 
 .nav .logo {
@@ -169,6 +168,10 @@ body {
   border-radius: 4px;
 
   padding: 10px 32px;
+}
+
+.order-button:hover {
+  cursor: pointer;
 }
 
 /* qualities */
@@ -283,6 +286,11 @@ body {
 
 .address {
   margin-bottom: 10px;
+}
+
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
 }
 
 /* portfolio page*/
